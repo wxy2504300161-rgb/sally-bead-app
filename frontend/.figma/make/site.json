@@ -1,0 +1,10 @@
+{
+  "description": "This app empowers DIY enthusiasts to create pixel art designs, manage bead inventory, and share inspiration within a vibrant community.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "pixel-art-diy-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "小豆像素 (Pixel Art DIY) 后端服务：灵感广场、草稿、豆仓、拼豆记录、会员等接口（零依赖，仅用 Node 标准库）",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node test/persist.test.mjs && node test/convert.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-pink: #FF8FAE;
+  --color-pink-deep: #EC5C86;
+  --color-blush: #FFDDE7;
+  --color-butter: #FFD79D;
+  --color-sky: #B5E8FF;
+  --color-lilac: #D8C4FF;
+  --color-mint: #B5F2D8;
+  --color-ink: #333333;
+  --color-sub: #777777;
+  --color-line: #EEEEEE;
+  --font-sans: 'Nunito', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --shadow-soft: 0 4px 12px rgba(255, 120, 160, 0.20);
+  --shadow-lift: 0 8px 24px rgba(255, 110, 155, 0.38);
+}
+
+@utility bg-grad-pink {
+  background-image: linear-gradient(135deg, #FFA6C1 0%, #FF7FA6 55%, #FF8E7A 100%);
+}
+@utility bg-grad-soft {
+  background-image: linear-gradient(160deg, #FFD3E1 0%, #FFE6EE 45%, #F3E4FF 100%);
+}
+@utility text-grad-pink {
+  background-image: linear-gradient(135deg, #FF6F9C, #FF8E7A);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+@keyframes pop { from { transform: scale(.8); opacity: 0 } to { transform: scale(1); opacity: 1 } }
+@keyframes fade { from { opacity: 0 } to { opacity: 1 } }
+
+html, body, #root { height: 100%; }
+html { -webkit-text-size-adjust: 100%; }
+body { background: #FFF0F5; color: #333; overscroll-behavior: none; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; touch-action: manipulation; }
+/* H5 安全区：适配刘海屏 / 底部 Home Indicator */
+.safe-top { padding-top: calc(env(safe-area-inset-top) + 0.75rem); }
+.safe-bottom { padding-bottom: calc(env(safe-area-inset-bottom) + 1.25rem); }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+.checker {
+  background-color: #fff;
+  background-image: linear-gradient(45deg, #f4f4f4 25%, transparent 25%), linear-gradient(-45deg, #f4f4f4 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f4f4f4 75%), linear-gradient(-45deg, transparent 75%, #f4f4f4 75%);
+  background-size: 12px 12px;
+  background-position: 0 0, 0 6px, 6px -6px, -6px 0;
+}

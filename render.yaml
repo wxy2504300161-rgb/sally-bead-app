@@ -1,0 +1,21 @@
+# Render 部署配置（一键部署后端）
+# 在 https://dashboard.render.com -> New -> Blueprint -> 连接本仓库，选中此文件即可。
+# 注意：服务运行于「整个仓库根目录」，后端通过根 package.json 的 `npm start`
+#       (node backend/src/server.js) 启动；shared/ 色卡数据在仓库根，自动可用。
+services:
+  - type: web
+    name: sally-bead-backend
+    runtime: node
+    plan: free
+    region: oregon
+    branch: main
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    healthCheckPath: "/api/health"
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # PORT 由 Render 自动注入，server.js 已读取 process.env.PORT，无需在此填写
+      # 如需限制跨域来源，取消下一行注释并改为你的前端域名（逗号分隔多个）
+      # - key: CORS_ORIGIN
+      #   value: "https://sally-bead.pages.dev"

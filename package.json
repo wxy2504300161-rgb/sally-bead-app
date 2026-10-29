@@ -1,0 +1,16 @@
+{
+  "name": "sally-pixel-art-diy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "小豆像素 · 拼豆 DIY App（前端 H5 + 零依赖 Node 后端，单一数据源 shared/）",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "dev:backend": "node --watch backend/src/server.js",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "test:backend": "npm --prefix backend test",
+    "test:frontend": "npm --prefix frontend test"
+  }
+}
